@@ -245,6 +245,9 @@ input, select, textarea {
 		border-radius: 25px;
 		margin: 0 auto;
 	}
+	.svg_genplan_ {
+		width: 50%;
+	}
 	#slider_button:hover {
 		color: #ddd;
 		opacity: 0.8;
@@ -318,15 +321,17 @@ input, select, textarea {
 	#svg_genplan {
 		height: 100%;
 		margin: 0 auto;
+		background-color: #D5EAE7;
 	}
-	#map_part {
+	#map_part, #red_part {
 		opacity: 0;
 		transition-duration: .5s;
 	}
-	#map_part:hover {
-		opacity: 0.5;
-		background: black;
+	#red_part:hover {
+		opacity: .8;
+		background: red;
 	}
+
 	.button {
 		font-family: 'Open Sans', sans-serif;
 	}
@@ -337,7 +342,9 @@ input, select, textarea {
 		font-family: 'Open Sans', sans-serif;
 	}
 	#video_panroama {
-		margin-bottom:0;
+		margin-bottom: 50px;
+		padding: 0;
+		margin-top: 50px;
 	}
 	#video_youtube {
 		width: 800px;
@@ -361,7 +368,7 @@ input, select, textarea {
 		width: 80%;
 		margin: 0 auto;
 		background-color: #F3F3F3;
-		box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 	}
 	.header_image {
 		background-color: #000;
@@ -387,6 +394,10 @@ input, select, textarea {
 		height: 300px;
 		width: 100%;
 	}
+	#icon_page {
+		width: 100px; 
+		opacity: 0.8;
+	}
 	#header_content_plot {
 		height: 30%;
 		width: 100%;
@@ -403,7 +414,7 @@ input, select, textarea {
 		text-align: center;
 	}
 	#content_plot_inside {
-		height: 40%;
+		height: 35%;
 		width: 100%;
 		color: #000;
 		font-size: 12px; 
@@ -428,10 +439,112 @@ input, select, textarea {
 		font-family: 'Roboto', sans-serif;
 		text-align: center;
 		pointer-events: cursor;
+		margin-bottom: 10px;
+	}
+	h4 {
+		font-size: 10pt;
+		margin-top: 0;
+	} 
+	#button_plot_more {
+		height: 30px;
+		width: 100px;
+		margin: 0 auto;
+		border-radius: 6px;
+		background-color: #DD9933;
+		box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+		transition-duration: .5s; 
+		color: #fff;
+		font-size: 12px; 
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		pointer-events: cursor;
+	}
+	#button_plot_more:hover {
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+	}
+	#content_plot_inside {
+		width: 150px;
+		margin: 0 auto;
+	}
+	#button_genplan {
+		height: 50px;
+		width: 250px;
+		margin: 0 auto;
+		border-radius: 6px;
+		background-color: #DD9933;
+		box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+		transition-duration: .5s; 
+		color: #fff;
+		font-size: 18px; 
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+		pointer-events: cursor;
 	}
 	#button_plot:hover {
 		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
 
+	}
+	#button_genplan:hover {
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+	}
+	.yandex_map {
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+	}
+	#form_section {
+		height: 300px;
+		width: 600px;
+		margin: 0 auto;
+	}
+	#form_content {
+		height: 70%;
+		width: 100%;
+		background-color: #F3F3F3;
+		border-radius: 9px;
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+	}
+	.sending_form {
+		height: 100%;
+		width: 100%;
+	}
+	#form_space {
+		height: 10%;
+		width: 100%;
+	}
+	#form_button {
+		height: 15%;
+		width: 80%;
+		border-radius: 9px;
+		margin: 0 auto;
+	}
+	input[type="text"] {
+	height: 27px;
+	width: 80%;
+	border: 10px;
+	border: 0px solid #000;
+	border-bottom: 1px solid #696D86;
+	background-color: transparent;	
+	color: #ddd;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+	margin: 0 auto;
+}
+	#form_space_1 {
+		width: 100%;
+		height: 15%;
+	}
+	#input_section {
+		padding: 0;
+	}
+	input[type="button"] {
+		height: 100%;
+		width: 100%;
+		border: 0px solid #fff;
+		font-family: 'Montserrat', sans-serif;
+		border-radius: 9px;
+		box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18), 0 4px 15px 0 rgba(0,0,0,0.15);
+		color: #fff;
+		background-color: #DD9933;
+		font-size: 12pt;
 	}
 		@media screen and (max-width: 1680px) {
 
@@ -466,8 +579,6 @@ input, select, textarea {
 				.container.medium {
 					width: 71.25%;
 				}
-
-
 		}
 
 		@media screen and (max-width: 840px) {
@@ -494,19 +605,60 @@ input, select, textarea {
 				display: block;
 				height: 100%;
 			}
-
 			#wrapper_land_plots {
 				width: 100%;
 				margin: 0 auto;
 				height: auto;
 				padding: 0;
-				margin-bottom: 30px;
+				margin-bottom: 50px;
 			}
 			#row_plot {
 				margin: 0 auto;
 				height: auto;
 			}	
+			#button_genplan {
+				height: 40px;
+				width: 150px;
+				margin: 0 auto;
+				border-radius: 6px;
+				background-color: #DD9933;
+				box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+				transition-duration: .5s; 
+				color: #fff;
+				font-size: 12px;
+				font-family: 'Roboto', sans-serif;
+				text-align: center;
+				pointer-events: cursor;
+			}
+			#icon_page {
+				width: 70px;
+			}
+			#form_section {
+				height: 250px;
+				width: 300px;
+				margin: 0 auto;
+			}
+			#space_form1 {
+				height: 15px;
+			}
 
+			#space_form2 {
+				height: 25px;
+				width: 100%;
+			}
+			button.form_button {
+				width: 10px;
+			}
+			h5 {
+				font-size: 10pt;
+			}
+			#included_features_icons {
+				margin-top: 0;
+			}
+			#footer_slider_article {
+				width: 80%;
+				height: 40px;
+			}
 		}
 
 		@media screen and (max-width: 736px) {
@@ -529,8 +681,8 @@ input, select, textarea {
 				position: absolute;
 				top: 0;
 				left: 0;
-				height: 100%;
-				width: 100%;
+				height: 97%;
+				width: 100.5%;
 				margin-bottom: 20px;
 			}
 			footer.major {
@@ -543,6 +695,11 @@ input, select, textarea {
 				width: 300px;
 				height: 180px;
 			}
+			#svg_genplan {
+			height: 100%;
+			margin: 0 auto;
+			background-color: #D5EAE7;
+		}		
 		}
 		@media screen and (max-width: 500px) {
 			.div_genplan {
@@ -574,6 +731,9 @@ input, select, textarea {
 				background-position: center;
 				background-size: 160%;
 				background-image: url('../../images/4.png');
+			}
+			.svg_genplan_ {
+				width: 100%;
 			}
 		}
 /* Row */
@@ -2452,7 +2612,7 @@ input, select, textarea {
 
 /* Button */
 
-	input[type="button"],
+	
 	input[type="submit"],
 	input[type="reset"],
 	button,
@@ -2474,7 +2634,6 @@ input, select, textarea {
 		font-size: 0.8em;
 		font-weight: 900;
 		letter-spacing: 2px;
-		min-width: 18em;
 		padding: 0 0.75em;
 		line-height: 3.75em;
 		text-align: center;
@@ -2946,7 +3105,7 @@ input, select, textarea {
 	#footer {
 		background: #E8EEF4;
 		color: #7c8081;
-		padding: 5em 5em 10em 5em;
+		padding: 5em 5em 2em 5em;
 		text-align: center;
 	}
 
@@ -3343,21 +3502,21 @@ input, select, textarea {
 					}
 
 					#navButton .toggle:before {
-						color: #fff;
+						color: #DD9933;
 						content: '\f0c9';
 						font-size: 1em;
 						height: 40px;
 						left: 10px;
 						line-height: 40px;
-						opacity: 0.5;
 						position: absolute;
 						top: 11px;
 						width: 60px;
 						z-index: 1;
+						font-size: 16pt;
 					}
 
 					#navButton .toggle:after {
-						background: rgba(163, 169, 170, 0.75);
+						background: transparent;
 						border-radius: 2px;
 						content: '';
 						height: 40px;
