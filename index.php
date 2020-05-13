@@ -304,7 +304,6 @@
 									<img src="images/genplan.svg" class="svg_genplan_">
 								</div>
 							</div><hr id="golden_hr" style="margin-top: 30px;">
-							<h4  style="font-family: 'Montserrat', sans-serif; width: 90%; margin: 0 auto; font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia rerum et sint ipsam adipisci recusandae qui minus velit itaque, voluptatibus mollitia dolor aut hic perspiciatis unde ducimus ut. Ex ad dolorum molestias voluptatum suscipit accusamus aliquam obcaecati libero ab in impedit hic nam tenetur id maiores, deserunt nisi aliquid distinctio!</h4>
 							<footer class="major">
 								<a href="pdf/genplan.pdf" target="_blank">
 									<div id="button_genplan">
