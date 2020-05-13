@@ -1,9 +1,35 @@
+<?php 
+	require_once 'mail/phpmailer/PHPMailerAutoload.php';
+	if (isset($_POST['send_mail_btn'])) {
+		$mail = new PHPMailer;
+		$mail->CharSet = 'utf-8';
+		// // $email = $_POST['email'];
+
+		// $user = R::findOne('users', 'email = ?', array($email));
+
+		$mail->Host = 'smtp.timeweb.ru';
+		$mail->SMTPAuth = true;                               // Enable SMTP authentication
+		$mail->Username = 'boss@ambassa.ru'; // email name(FROM)
+		$mail->Password = 'Klimklim25112000'; // email password(FROM)
+		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, ssl also accepted
+		$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
+
+		$mail->setFrom('boss@ambassa.ru'); // email name(FROM)
+		$mail->addAddress('crazzylama0@yandex.ru');     // email(TO) 
+		$mail->isHTML(true);
+
+		$mail->Subject = 'Письмо от Amba';
+		$mail->Body = "Ваш ID в системе Амба";
+		$mail->AltBody = '';
+
+
+		$test = true;
+		if(!$mail->send()) {
+		    $test = false;
+		}
+	}	
+?>
 <!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Новая Иберия - коттеджный посёлок</title>
@@ -29,7 +55,7 @@
 							<li class="current"><a href="index.html">Почему мы?</a></li>
 							<li class="current"><a href="#genplan">Генплан</a></li>
 							<li class="current"><a href="index.html">Контакты</a></li>
-							<li><a href="#" class="button primary">Sign Up</a></li>
+							<li><a href="#input_section" class="button primary">Заказать звонок</a></li>
 						</ul>
 					</nav>
 				</header>
@@ -41,7 +67,7 @@
 					    	<table class="table_bottom">
 					    		<tr class="tr_bottom">
 					    			<td class="td_bottom">
-					    				<h5 style="font-family: 'Montserrat', sans-serif; margin: 0 auto; font-size: 20pt; margin-bottom: 20px;"> 
+					    				<h5 style="font-family: 'Montserrat', sans-serif; margin: 0 auto; font-size: 20pt; margin-bottom: 20px;" class="wow bounceInLeft animate__delay-0s" id="slider_text"> 
 											коттеджный посёлок <br> "новая иберия"
 										</h5>
 					    			</td>
@@ -82,7 +108,7 @@
 								<div class="col-4 col-12-narrower">
 									
 									<section>
-										<div class="icon solid"><img class="wow fadeIn" src="svg/pin.svg" id="icon_page" data-wow-duration="4s"></div>
+										<div class="icon solid"><img src="svg/pin.svg" class="wow fadeIn animate__delay-0s" id="icon_page" data-wow-duration="4s"></div>
 										<header style="margin-top: 5px;">
 											<h3 style="font-family: 'Montserrat', sans-serif; margin-bottom: 5px;">Доступность</h3>
 											<h4  style="font-family: 'Montserrat', sans-serif;">Всего 120 км. от Москвы</h4>
@@ -215,7 +241,8 @@
 									</svg>
 									<img src="images/genplan.svg" class="svg_genplan_">
 								</div>
-							</div>
+							</div><hr id="golden_hr" style="margin-top: 30px;">
+							<h4  style="font-family: 'Montserrat', sans-serif; width: 90%; margin: 0 auto; font-size: 12px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia rerum et sint ipsam adipisci recusandae qui minus velit itaque, voluptatibus mollitia dolor aut hic perspiciatis unde ducimus ut. Ex ad dolorum molestias voluptatum suscipit accusamus aliquam obcaecati libero ab in impedit hic nam tenetur id maiores, deserunt nisi aliquid distinctio!</h4>
 							<footer class="major">
 								<a href="pdf/genplan.pdf" target="_blank">
 									<div id="button_genplan">
@@ -237,8 +264,8 @@
 							<iframe id="video_youtube" src="https://www.youtube.com/embed/tKuvtFMLj64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</section>
 
-						<section class="wrapper container" id="wrapper_land_plots">
-							
+						<section class="wrapper container" id="wrapper_land_plots" style="text-align: center;"> 
+							<h5 style="font-family: 'Montserrat', sans-serif; width: 80%; margin: 0 auto;" >Посмотрите на поселок с высоты птичьего полета</h5> <hr id="golden_hr" style="margin-bottom: 15px;">
 							<div class="row" id="row_plot">
 								<div class="col-4 col-12-narrower wow fadeInLeft" id="plot_1">
 									<table class="table_middle">
@@ -246,7 +273,7 @@
 											<td class="td_middle">
 												<div id="plot_wrapper">
 													<div class="header_image">
-														<div id="header_image2">
+														<div id="header_image1">
 
 														</div>
 													</div>
@@ -255,8 +282,8 @@
 															<table class="table_middle">
 																<tr class="tr_middle">
 																	<td class="td_middle">
-																		УЧАСТОК № 23 <br>
-																		<font class="plot_square_header">Площадь участка - 12 сот. </font>
+																		УЧАСТОК № 1 <br>
+																		<font class="plot_square_header">Площадь участка - 12.26 сот. </font>
 																	</td>
 																</tr>
 															</table>
@@ -372,8 +399,8 @@
 
 												<div id="plot_wrapper">
 													<div class="header_image">
-														<div id="header_image2">
-
+														<div id="header_image3">
+															
 														</div>
 													</div>
 													<div id="content_plot">
@@ -433,20 +460,33 @@
 				</article>
 				<section class="wrapper container" style="background-color: none; padding: 0; text-align: center;">
 					<header class="major">
-						<h5 style="font-family: 'Montserrat', sans-serif;">Посмортите, где мы находимся. приезжайте, будем Вам рады!</b></h5>
-						<hr id="golden_hr" style="opacity: 0.2; width: 100%;">
+						<h5 style="font-family: 'Montserrat', sans-serif; width: 80%; margin: 0 auto;">Посмортите, где мы находимся. приезжайте, будем Вам рады!</b></h5>
+						<hr id="golden_hr" style="margin-bottom: 15px;">
 					</header>
 					<script type="text/javascript" charset="utf-8" async class="yandex_map" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A685daa02b00d0f6991f9090974ea4fa024eee6dae95613491fcdfaeb4f8d2c77&amp;width=100%25&amp;height=453&amp;lang=ru_RU&amp;scroll=true"></script>
 				</section>
 			<!-- CTA -->
-				
-				<section class="wrapper container" id="input_section">
-					<header class="major" style="text-align: center; width: 70%; margin: 0 auto;">
+				<section class="wrapper container" style="background-color: none; padding: 0; text-align: center;" id="scroll">
+					
+					<div class="scroll_attacment">
+						<table class="table_middle">
+							<tr class="tr_middle">
+								<td class="td_middle" style="text-align: center; margin: 0 auto;" id="font_middle_td">
+									<font class="scroll_text">ЗАКАЖИТЕ ЗВОНОК ИЛИ ЗВОНИТЕ ПО НОМЕРУ: +79037264444</font>
+								</td>
+							</tr>
+						</table>
+					</div>
+
+				</section>
+
+				<section class="wrapper container" id="input_section" name="order_call">
+					<header class="major" style="text-align: center; width: 70%; margin: 0 auto; margin-top: 30px;">
 						<h5 style="font-family: 'Montserrat', sans-serif; margin: 0 auto;">Закажите звонок и мы Вам обязательно перезвоним!</b></h5>
 						<hr id="golden_hr" style="opacity: 0.2; margin-bottom: 10px; width: 100%;">
 					</header>
 					<div id="form_section">
-						<form action="" class="sending_form">
+						<form action="index.php" method="post" class="sending_form">
 							<div id="form_content">
 								<div id="form_space_1"></div>
 								<input type="text" size="26" maxlength="26" placeholder="Имя" name="name" id="name" style="border: 0px solid #ddd; border-bottom: 1px solid #ddd; width: 80%;">
@@ -455,7 +495,7 @@
 							</div>
 							<div id="form_space"></div>
 							<div id="form_button">
-								<input type="button" value="ЗАКАЗАТЬ ЗВОНОК">
+								<input type="submit" name="send_mail_btn" value="ЗАКАЗАТЬ ЗВОНОК">
 							</div>
 						</form>
 					</div>
@@ -465,11 +505,10 @@
 				<footer id="footer">
 
 					<ul class="icons">
-						<li><a href="#" class="icon brands circle fa-vk"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
-						<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="https://instagram.com/new_iberia.ru?igshid=x1h78ea86d19" class="icon brands circle fa-vk"><span class="label">VKontakte</span></a></li>
+						<li><a href="https://instagram.com/new_iberia.ru?igshid=x1h78ea86d19" class="icon brands circle fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://instagram.com/new_iberia.ru?igshid=x1h78ea86d19" class="icon brands circle fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/crazzylama0" class="icon brands fa-github"><span class="label">Github</span></a></li>
 					</ul>
 
 					<ul class="copyright">
