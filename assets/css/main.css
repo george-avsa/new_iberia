@@ -191,6 +191,7 @@ input, select, textarea {
 	}
 	.td_middle {
 		vertical-align: middle;
+		text-align: center;
 	}
 	.table_bottom, .tr_bottom, .td_bottom {
 		width: 100%;
