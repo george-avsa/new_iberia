@@ -1,31 +1,44 @@
 <?php 
+
+	if(isset($_POST['send_mail_btn'])){
+
 	require_once 'mail/phpmailer/PHPMailerAutoload.php';
-	if (isset($_POST['send_mail_btn'])) {
+
 		$mail = new PHPMailer;
 		$mail->CharSet = 'utf-8';
-		// // $email = $_POST['email'];
 
-		// $user = R::findOne('users', 'email = ?', array($email));
+		$name = $_POST['name'];
+		$surname = $_POST['surname'];
+		$phone = $_POST['phone'];
 
-		$mail->Host = 'smtp.timeweb.ru';
+		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+		$mail->isSMTP();                                      // Set mailer to use SMTP
+		$mail->Host = 'smtp.yandex.ru';  																							// Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = 'boss@ambassa.ru'; // email name(FROM)
-		$mail->Password = 'Klimklim25112000'; // email password(FROM)
-		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, ssl also accepted
+		$mail->Username = 'crazzylama0@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
+		$mail->Password = 'Avsik_georgerya0'; // Ваш пароль от почты с которой будут отправляться письма
+		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 465; // TCP port to connect to / этот порт может отличаться у других провайдеров
 
-		$mail->setFrom('boss@ambassa.ru'); // email name(FROM)
-		$mail->addAddress('crazzylama0@yandex.ru');     // email(TO) 
-		$mail->isHTML(true);
+		$mail->setFrom('crazzylama0@yandex.ru'); // от кого будет уходить письмо?
+		$mail->addAddress('crazzylama0@yandex.ru');     // Кому будет уходить письмо 
+		//$mail->addAddress('ellen@example.com');               // Name is optional
+		//$mail->addReplyTo('info@example.com', 'Information');
+		//$mail->addCC('cc@example.com');
+		//$mail->addBCC('bcc@example.com');
+		//$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+		//$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
+		$mail->isHTML(true);                                  // Set email format to HTML
 
-		$mail->Subject = 'Письмо от Amba';
-		$mail->Body = "Ваш ID в системе Амба";
+		$mail->Subject = 'Заявка с сайта';
+		$mail->Body    = 'Пришла новая заявка <br>Имя:'. $name .' <br>Фамилия '. $surname .' <br>Телефон '. $phone;
 		$mail->AltBody = '';
 
-
-		$test = true;
 		if(!$mail->send()) {
-		    $test = false;
+		    echo '<script>condole.log("ERROR");<script>';
+		} else {
+		    
 		}
 	}	
 ?>
@@ -490,8 +503,8 @@
 							<div id="form_content">
 								<div id="form_space_1"></div>
 								<input type="text" size="26" maxlength="26" placeholder="Имя" name="name" id="name" style="border: 0px solid #ddd; border-bottom: 1px solid #ddd; width: 80%;">
-								<input type="text" size="26" maxlength="26" placeholder="Фамилия" name="name" id="name" style="border: 0px solid #ddd; border-bottom: 1px solid #ddd; width: 80%; margin-top: 20px; margin-bottom: 20px;">
-								<input type="text" size="26" maxlength="26" placeholder="Телефон" name="name" id="phone_number" style="border: 0px solid #ddd; border-bottom: 1px solid #ddd; width: 80%;" >
+								<input type="text" size="26" maxlength="26" placeholder="Фамилия" name="surname" id="name" style="border: 0px solid #ddd; border-bottom: 1px solid #ddd; width: 80%; margin-top: 20px; margin-bottom: 20px;">
+								<input type="text" size="26" maxlength="26" placeholder="Телефон" name="phone" id="phone_number" style="border: 0px solid #ddd; border-bottom: 1px solid #ddd; width: 80%;" >
 							</div>
 							<div id="form_space"></div>
 							<div id="form_button">
