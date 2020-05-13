@@ -218,10 +218,31 @@ input, select, textarea {
 		opacity: 0.3;
 	}
 	#slider_1, #slider_2, #slider_3, #slider_4 {
-		width:100vw; height: 400px; background-color: grey;
+		width:100vw; height: 400px; background-color: #F3F6FA;
 	}
 	#slider_1 {
-		background-image: url('../../images/panorama.jpeg');
+		background-image: url('../../images/slider2.jpeg');
+		background-position: center;
+		background-size: 80%;
+		background-repeat: no-repeat;
+	}
+	#slider_4 {
+		background-image: url('../../images/slider5.jpeg');
+		background-position: center;
+		background-size: 80%;
+		background-repeat: no-repeat;
+	}
+	#slider_2 {
+		background-image: url('../../images/slider6.jpeg');
+		background-position: center;
+		background-size: 80%;
+		background-repeat: no-repeat;
+	}
+	#slider_3 {
+		background-image: url('../../images/slider7.jpeg');
+		background-position: center;
+		background-size: 80%;
+		background-repeat: no-repeat;
 	}
 	.header_margin {
 		width: 100%;
@@ -408,13 +429,14 @@ input, select, textarea {
 	#header_image3 {
 		width: 100%;
 		height: 200px;
-		background-image: url('../../images/plot.jpg');
-		background-position: center;
+		background-image: url('../../images/plot_house3.jpeg');
+		background-position: top;
 		background-size: 120%;
 		transition-duration: 1s;
+		opacity: 0.8;
 	}
 	#header_image3:hover {
-		opacity: 0.7;
+		opacity: 0.55;
 	}
 	#content_plot {
 		height: 300px;
@@ -599,42 +621,13 @@ input, select, textarea {
 		font-weight: bold;
 		letter-spacing: 2px;
 		color: #fff;
-		text-shadow: 
-		-0   -1px 0   #000000,
-		 0   -1px 0   #000000,
-		-0    1px 0   #000000,
-		 0    1px 0   #000000,
-		-1px -0   0   #000000,
-		 1px -0   0   #000000,
-		-1px  0   0   #000000,
-		 1px  0   0   #000000,
-		-1px -1px 0   #000000,
-		 1px -1px 0   #000000,
-		-1px  1px 0   #000000,
-		 1px  1px 0   #000000,
-		-1px -1px 0   #000000,
-		 1px -1px 0   #000000,
-		-1px  1px 0   #000000,
-		 1px  1px 0   #000000;
 	}
-	#slider_text {
-			text-shadow: 
-		-0   -1px 0   #000000,
-		 0   -1px 0   #000000,
-		-0    1px 0   #000000,
-		 0    1px 0   #000000,
-		-1px -0   0   #000000,
-		 1px -0   0   #000000,
-		-1px  0   0   #000000,
-		 1px  0   0   #000000,
-		-1px -1px 0   #000000,
-		 1px -1px 0   #000000,
-		-1px  1px 0   #000000,
-		 1px  1px 0   #000000,
-		-1px -1px 0   #000000,
-		 1px -1px 0   #000000,
-		-1px  1px 0   #000000,
-		 1px  1px 0   #000000;
+	#slider_button {
+		height: 50px;
+		width: 200px;
+		border-radius: 18px;
+		font-family: 'Montserrat', sans-serif;	
+		color: #fff;
 	}
 		@media screen and (max-width: 1680px) {
 
@@ -759,6 +752,15 @@ input, select, textarea {
 			}
 			.scroll_text {
 				width: 80%;
+				font-weight: normal;
+				color: #000;
+				opacity: 0.7;
+			}
+			.scroll_attacment {
+				text-shadow: 0;
+				color: #000;
+				opacity: 0.7;
+				font-weight: normal;
 			}
 		}
 
@@ -810,20 +812,20 @@ input, select, textarea {
 				background-size: 100%;
 			}
 			#slider_1 {
-				background-image: url('../../images/1.1.jpg');
+				background-image: url('../../images/slider3.jpeg');
 				background-color: none;
 				background-position: center;
 				background-size: 160%;
 			}
 			#slider_2 {
-				background-image: url('../../images/1.2.jpeg');
+				background-image: url('../../images/slider2.jpeg');
 				background-color: none;
 				background-position: center;
 				background-size: 160%;
 			}
 			#slider_3 {
-				background-image: url('../../images/1.3.jpeg');
 				background-color: none;
+				background-image: url('../../images/1.1.jpg');
 				background-position: center;
 				background-size: 160%;
 			}
@@ -831,7 +833,7 @@ input, select, textarea {
 				background-color: none;
 				background-position: center;
 				background-size: 160%;
-				background-image: url('../../images/4.png');
+				background-image: url('../../images/slider4.jpeg');
 			}
 			.svg_genplan_ {
 				width: 100%;
@@ -3647,11 +3649,15 @@ input, select, textarea {
 				/*background: #CEF9EE;*/
 				/*background: #B7DDD3;*/				
 				background: #D5EAE7;	
-				color: #000;
+				color: #DD9933;
 				font-size: 0.8em;
 				letter-spacing: 0.075em;
 				text-transform: uppercase;
 				padding: 0.25em 0.75em 1em 0.75em;
+				background-image: url('../../images/3.svg');
+				background-position: bottom center;
+				background-size: 40%;
+				background-repeat: no-repeat;
 			}
 			#navPanel.navPanel_black {
 				-moz-backface-visibility: hidden;
@@ -3676,26 +3682,30 @@ input, select, textarea {
 				z-index: 10002;
 				background: #000;
 				opacity: 0.8;
-				color: #fff;
+				color: #DD9933;
 				font-size: 0.8em;
 				letter-spacing: 0.075em;
 				text-transform: uppercase;
 				padding: 0.25em 0.75em 1em 0.75em;
+				background-image: url('../../images/3.svg');
+				background-position: bottom center;
+				background-size: 40%;
+				background-repeat: no-repeat;
 			}
-
-				#navPanel .link {
-					border: 0;
-					color: inherit;
-					display: block;
-					height: 3em;
-					line-height: 3em;
-					opacity: 0.75;
-					text-decoration: none;
-				}
-
+			#navPanel .link {
+				border: 0;
+				color: inherit;
+				display: block;
+				height: 3em;
+				line-height: 3em;
+				opacity: 0.75;
+				text-decoration: none;
+				color: #DD9933;
+			}
 					#navPanel .link.depth-0 {
 						font-weight: 900;
-						color: #8F9393;
+						color: #DD9933;
+						font-family: 'Montserrat', sans-serif;
 					}
 
 					#navPanel .link:first-child {

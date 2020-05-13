@@ -14,7 +14,7 @@
 		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = 'smtp.yandex.ru';  																							// Specify main and backup SMTP servers
+		$mail->Host = 'smtp.yandex.ru';  					  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
 		$mail->Username = 'crazzylama0@yandex.ru'; // Ваш логин от почты с которой будут отправляться письма
 		$mail->Password = 'Avsik_georgerya0'; // Ваш пароль от почты с которой будут отправляться письма
@@ -47,6 +47,7 @@
 	<head>
 		<title>Новая Иберия - коттеджный посёлок</title>
 		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
@@ -64,10 +65,10 @@
 					<h1 id="logo"><a href="index.html">Новая Иберия</a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Главная</a></li>
-							<li class="current"><a href="index.html">Почему мы?</a></li>
+							<li class="current"><a href="#banner">Главная</a></li>
+							<li class="current"><a href="#included_features_icons">Почему мы?</a></li>
 							<li class="current"><a href="#genplan">Генплан</a></li>
-							<li class="current"><a href="index.html">Контакты</a></li>
+							<li class="current"><a href="#contact_h5">Контакты</a></li>
 							<li><a href="#input_section" class="button primary">Заказать звонок</a></li>
 						</ul>
 					</nav>
@@ -79,20 +80,68 @@
 					    <div class="item" id="slider_1">
 					    	<table class="table_bottom">
 					    		<tr class="tr_bottom">
-					    			<td class="td_bottom">
+					    			<td class="td_bottom" style="padding-bottom: 40px;">
 					    				<h5 style="font-family: 'Montserrat', sans-serif; margin: 0 auto; font-size: 20pt; margin-bottom: 20px;" class="wow bounceInLeft animate__delay-0s" id="slider_text"> 
 											коттеджный посёлок <br> "новая иберия"
 										</h5>
+									<a href="tel:+79037264444">
+										<div id="slider_button"  class="wow bounceInRight animate__delay-0s">
+											<table class="table_middle">
+									    		<tr class="tr_middle">
+									    			<td class="td_middle" style="font-size: 14pt;">
+														ПОЗВОНИТЬ
+									    			</td>
+									    		</tr>
+									    	</table>
+										</div>	
+									</a>
 					    			</td>
 					    		</tr>
 					    	</table>
 					    </div>
 					    <div class="item" id="slider_2">
-							<div class="header_margin">
-					    	</div>
+							<table class="table_bottom">
+					    		<tr class="tr_bottom">
+					    			<td class="td_bottom" style="padding-bottom: 40px;">
+					    				<h5 style="font-family: 'Montserrat', sans-serif; margin: 0 auto; font-size: 20pt; margin-bottom: 20px;" class="wow bounceInLeft animate__delay-0s" id="slider_text"> 
+											любите отдых на природе?
+										</h5>
+									<a href="tel:+79037264444">
+										<div id="slider_button"  class="wow bounceInRight animate__delay-0s">
+											<table class="table_middle">
+									    		<tr class="tr_middle">
+									    			<td class="td_middle" style="font-size: 14pt;">
+														ПОЗВОНИТЬ
+									    			</td>
+									    		</tr>
+									    	</table>
+										</div>	
+									</a>
+					    			</td>
+					    		</tr>
+					    	</table>
 					    </div>
 					    <div class="item" id="slider_3">
-							<div class="header_margin"></div>
+							<table class="table_bottom">
+					    		<tr class="tr_bottom">
+					    			<td class="td_bottom" style="padding-bottom: 40px;">
+					    				<h5 style="font-family: 'Montserrat', sans-serif; margin: 0 auto; font-size: 20pt; margin-bottom: 20px;" class="wow bounceInLeft animate__delay-0s" id="slider_text"> 
+											все есть для вашей кофмортной жизни
+										</h5>
+									<a href="tel:+79037264444">
+										<div id="slider_button"  class="wow bounceInRight animate__delay-0s">
+											<table class="table_middle">
+									    		<tr class="tr_middle">
+									    			<td class="td_middle" style="font-size: 14pt;">
+														ПОЗВОНИТЬ
+									    			</td>
+									    		</tr>
+									    	</table>
+										</div>	
+									</a>
+					    			</td>
+					    		</tr>
+					    	</table>
 					    </div>
 					    <div class="item" id="slider_4">
 							<div class="header_margin"></div>
@@ -314,6 +363,7 @@
 															<table class="table_middle">
 																<tr class="tr_middle">
 																	<td class="td_middle">
+																		<a href="tel:+79037264444">
 																		<div id="button_plot">
 																			<table class="table_middle">
 																				<tr class="tr_middle">
@@ -323,6 +373,8 @@
 																				</tr>
 																			</table>
 																		</div>
+																		</a>
+																		<a href="pdf/genplan.pdf" target="_blank">
 																		<div id="button_plot_more">
 																			<table class="table_middle">
 																				<tr class="tr_middle">
@@ -332,6 +384,7 @@
 																				</tr>
 																			</table>
 																		</div>
+																		</a>
 																	</td>
 																</tr>
 															</table>
@@ -377,6 +430,7 @@
 															<table class="table_middle">
 																<tr class="tr_middle">
 																	<td class="td_middle">
+																		<a href="tel:+79037264444">
 																		<div id="button_plot">
 																			<table class="table_middle">
 																				<tr class="tr_middle">
@@ -386,6 +440,8 @@
 																				</tr>
 																			</table>
 																		</div>
+																		</a>
+																		<a href="pdf/genplan.pdf" target="_blank">
 																		<div id="button_plot_more">
 																			<table class="table_middle">
 																				<tr class="tr_middle">
@@ -395,6 +451,7 @@
 																				</tr>
 																			</table>
 																		</div>
+																		</a>
 																	</td>
 																</tr>
 															</table>
@@ -421,8 +478,8 @@
 															<table class="table_middle">
 																<tr class="tr_middle">
 																	<td class="td_middle">
-																		УЧАСТОК № 23 <br>
-																		<font class="plot_square_header">Площадь участка - 12 сот. </font>
+																		УЧАСТОК № 3 <br>
+																		<font class="plot_square_header">Площадь участка - 8.26 сот. </font>
 																	</td>
 																</tr>
 															</table>
@@ -440,6 +497,7 @@
 															<table class="table_middle">
 																<tr class="tr_middle">
 																	<td class="td_middle">
+																		<a href="tel:+79037264444">
 																		<div id="button_plot">
 																			<table class="table_middle">
 																				<tr class="tr_middle">
@@ -449,6 +507,8 @@
 																				</tr>
 																			</table>
 																		</div>
+																		</a>
+																		<a href="pdf/genplan.pdf" target="_blank">
 																		<div id="button_plot_more">
 																			<table class="table_middle">
 																				<tr class="tr_middle">
@@ -458,6 +518,7 @@
 																				</tr>
 																			</table>
 																		</div>
+																		</a>
 																	</td>
 																</tr>
 															</table>
@@ -479,19 +540,9 @@
 					<script type="text/javascript" charset="utf-8" async class="yandex_map" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A685daa02b00d0f6991f9090974ea4fa024eee6dae95613491fcdfaeb4f8d2c77&amp;width=100%25&amp;height=453&amp;lang=ru_RU&amp;scroll=true"></script>
 				</section>
 			<!-- CTA -->
-				<section class="wrapper container" style="background-color: none; padding: 0; text-align: center;" id="scroll">
+				
 					
-					<div class="scroll_attacment">
-						<table class="table_middle">
-							<tr class="tr_middle">
-								<td class="td_middle" style="text-align: center; margin: 0 auto;" id="font_middle_td">
-									<font class="scroll_text">ЗАКАЖИТЕ ЗВОНОК ИЛИ ЗВОНИТЕ ПО НОМЕРУ: +79037264444</font>
-								</td>
-							</tr>
-						</table>
-					</div>
-
-				</section>
+					<h5 style="font-family: 'Montserrat', sans-serif; margin: 0 auto; font-size: 16px; margin: 0 auto; text-align: center;" id="contact_h5">Позвоните нам: <br> <a href="tel:+7-903-726-44-44" style="text-decoration: none;"></a>+7-903-726-44-44</b></h5><hr id="golden_hr" style="opacity: 0.2; margin-bottom: 10px; width: 80%; margin: 0 auto;">
 
 				<section class="wrapper container" id="input_section" name="order_call">
 					<header class="major" style="text-align: center; width: 70%; margin: 0 auto; margin-top: 30px;">
@@ -553,7 +604,7 @@
 			    items:1,
 			    dots:false,
 			    autoplay:true,
-			    autoplayTimeout:10000,
+			    autoplayTimeout:100000,
 			})
 		</script>
 		<script src="assets/js/custom_alert.js"></script>
