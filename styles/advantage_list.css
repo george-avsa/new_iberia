@@ -1,0 +1,145 @@
+.advantage_list {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.advantage_list_title {
+	width: 430px;
+	margin-top: 80px;
+	margin-bottom: 60px;
+}
+.advantages_list__advantages {
+	width: 100%;
+	height: auto;	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 80px;
+}
+.advantage_item {
+	width: 350px;
+	height: auto;
+	float: left;
+}
+.advantage_pic {
+	width: 80px;
+}
+.advantage_name {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 24px;
+	margin-top: 10px;
+	color: #FFFFFF;
+}
+.advantage_description {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	margin-top: 10px;
+	color: #FFFFFF;
+}
+.advantage_middle {
+
+}
+.second_col_item {
+	margin-top: 80px;
+}
+.fishing_description {
+	width: 220px;
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (max-device-width : 899px) 
+and (orientation : landscape) {
+	.advantage_list {
+	    max-width: 90%;
+	    margin: 0 auto;
+	}
+	.advantage_item {
+		width: 26%;
+	}
+	.second_col_item {
+		margin-top: 30px;
+	}
+	.block_title {
+		font-size: 24px;
+	}
+	.advantage_list_title {
+		width: 258px;
+	    margin-bottom: 30px;
+	}
+	.advantage_name, .advantage_description {
+		font-size: 14px;
+	}
+	.fishing_description {
+		width: 150px;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 899px) 
+and (orientation : portrait) {
+	.advantage_list {
+	    max-width: 90%;
+	    margin: 0 auto;
+	}
+	.advantage_item {
+		width: 45%;
+	}
+	.second_col_item {
+		margin-top: 0px;
+	}
+	.second_item_portrait {
+		margin-top: 50px;
+	}
+	.block_title {
+		font-size: 24px;
+	}
+	.advantage_list_title {
+		width: 258px;
+	    margin-bottom: 30px;
+	}
+	.advantage_name, .advantage_description {
+		font-size: 14px;
+	}
+	.fishing_description {
+		width: 150px;
+	}
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 900px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	.advantage_list {
+	    max-width: 900px;
+	    margin: 0 auto;
+	}
+	.advantage_item {
+		width: 33.3%;
+	}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	.advantage_list {
+	    max-width: 700px;
+	    margin: 0 auto;
+	}
+	.advantage_item {
+		width: 45%;
+	}
+	.second_col_item {
+		margin-top: 0px;
+	}
+	.second_item_portrait {
+		margin-top: 50px;
+	}
+}

@@ -1,0 +1,169 @@
+.news {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 80px 0 0 0;
+	display: flex;
+	position: relative;
+	box-sizing: border-box;
+}
+.news_title {
+	margin-right: 80px;
+	width: 440px;
+}
+.news_line {
+	height: auto;
+	width: 2000px;
+	left: 500px;
+	display: flex;
+	margin-bottom: 60px;
+}
+.news_item {
+	width: 380px;
+	height: auto;	
+	margin-right: 30px;
+} 
+.news_item-image {
+	width: 100%;
+	border-radius: 10px;
+	height: 200px;
+	background-image: url('../images/slider_kek.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+}
+.news_item-date {
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	color: #FFFFFF;
+	margin-bottom: 10px;
+}
+.news_item-title {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 140%;
+	color: #FFFFFF;
+	margin-bottom: 20px;
+}
+.news_item-description {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+	margin-bottom: 22px;
+}
+.news_item-more {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+	color: #00A550;
+}
+div.news_more {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+h1.news_more {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 120%;
+	text-decoration-line: underline;
+	color: #FFFFFF;
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (max-device-width : 899px) 
+and (orientation : landscape) {
+	.news {
+		max-width: 90%;
+	}
+	.news_line {
+		width: 100%;
+	}
+	.news_item {
+		width: 100%;
+		margin-right: 0px;
+	}
+	.news_item-image {
+		width: 100%;
+	}
+	.news_item {
+		display: none;
+	}
+	.news_item-mobile {
+		display: block;
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 899px) 
+and (orientation : portrait) {
+	.news {
+		display: block;
+		max-width: 90%;
+	}
+	.news_line {
+		width: 100%;
+	}
+	.news_item {
+		width: 100%;
+		margin-right: 0px;
+	}
+	.news_item-image {
+		width: 100%;
+	}
+	.news_item {
+		display: none;
+	}
+	.news_item-mobile {
+		display: block;
+	}
+	.news_title {
+		margin-bottom: 30px;
+	}
+}
+
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 900px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	.news {
+		max-width: 700px;
+		display: flex;
+	}
+	.news_line {
+		width: 100%;
+	}
+	.news_item {
+		width: 100%;
+		margin-right: 0px;
+	}
+	.news_item-image {
+		width: 100%;
+	}
+	.news_item {
+		display: none;
+	}
+	.news_item-mobile {
+		display: block;
+	}
+}
+

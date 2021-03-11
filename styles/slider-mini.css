@@ -1,0 +1,62 @@
+.slider_mini {
+	height: 300px;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.slider-mini_big-item {
+	height: 100%;
+	width: 70%;
+	background: blue;
+	background-image: url('../images/slider_kek.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.slider-mini_small-item {
+	height: 90%;
+	width: 25%;
+	position: relative;
+	background-image: url('../images/slider_kek.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.slider-mini_small-item_back {
+	height: 100%;
+	width: 100%;
+	background-color: #232323;
+	transition: .5s;
+	opacity: .8;
+	z-index: 50;
+}
+.slider-mini_small-arrow-body {
+	position: absolute;
+	height: 30%;
+	width: 20%;
+	top: 35%;
+	left: 40%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .5s;
+	z-index: 40;
+}
+.slider-mini_small-arrow {
+	height: 40px;
+	width: 40px;
+	border: 3px solid #fff;
+	border-radius: 6px;
+	background-image: url('../../images/arrow-right.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 16px;
+}
+
+
+.slider-mini_small-item_hover {
+	opacity: 0.9;
+	background-color: #00A550;
+	transition: .5s;
+}
