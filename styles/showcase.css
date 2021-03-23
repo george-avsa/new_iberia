@@ -27,16 +27,16 @@
 	z-index: 1000;
 }
 .discoint_desk {
+	display: flex;
 	position: absolute;
 	width: 200px;
 	height: 100%;
 	right: -200px;
-	top: 0;
+	bottom: 0;
 	border-radius: 0 10px 10px 0;
 	background-color: #323232;
 	box-sizing: border-box;
 	padding-left: 30px;
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
@@ -57,6 +57,9 @@
 .newclass {
 	color: red;
 }
+.notthree {
+	margin-left: 30px;
+}
 .showcase_calendar_pic {
 	width: 60px;
 	margin-right: 20px;
@@ -73,7 +76,6 @@
 .showcase-body {
 	width: 100%;
 	height: auto;
-	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
@@ -81,6 +83,9 @@
 .showcase-item {
 	width: 380px;
 	margin-bottom: 60px;
+	float: left;
+	height: 400px;
+	overflow: hidden;
 }
 .showcase-more {
 	width: 100%;
@@ -173,12 +178,20 @@ and (orientation : landscape) {
 	.showcase_discounts {
 		max-width: 90%;
 	}
+	.datepicker-here {
+		bottom: -220px;
+		left: -300px;
+	}
 	/*.showcase-body {
 		display: block;
 	}*/
 	.showcase-item {
 		width: 30%;
 		margin-bottom: 30px;
+		height: 260px;
+	}
+	.notthree {
+		margin-left: 3%;
 	}
 	.showcase-item__image {
 		height: 100px;
@@ -220,6 +233,21 @@ and (orientation : portrait) {
 	.showcase_discounts {
 		max-width: 90%;
 	}
+	.datepicker-here {
+		bottom: -220px;
+		left: -150px;
+	    border-radius: 0px;
+	}
+	.discoint_desk {
+	    width: 250px;
+	    height: 150px;
+	    right: 0px;
+	    bottom: -150px;
+	    position: absolute;
+	    padding-left: 20px;
+	    padding-right: 10px;
+	    border-radius: 0px 0px 0px 0px;
+	}
 	.showcase-body {
 		display: block;
 	}
@@ -236,6 +264,9 @@ and (orientation : portrait) {
 	.showcase_calendar_pic {
 		margin-right: 10px;
 		width: 40px;
+	}
+	.notthree {
+		margin-left: 0px;
 	}
 }
 
@@ -254,6 +285,7 @@ and (orientation : landscape) {
 	.showcase-item {
 		width: 30%;
 		margin-bottom: 30px;
+		height: 320px;
 	}
 	.showcase-item__image {
 		height: 150px;
@@ -299,11 +331,13 @@ and (orientation : portrait) {
 	/*.showcase-body {
 		display: block;
 	}*/
-	.showcase-body {
-		display: flex;
+	.datepicker-here {
+		bottom: -240px;
+		left: -200px;
 	}
 	.showcase-item {
 		width: 30%;
+		height: 260px;
 		margin-bottom: 30px;
 	}
 	.showcase-item__image {
@@ -333,5 +367,8 @@ and (orientation : portrait) {
 		width: 90%;
 		height: 40px;
 		font-size: 16px;
+	}
+	.notthree {
+		margin-left: 30px;
 	}
 }

@@ -7,10 +7,33 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
 	}
 });
 
+
+function checkTodaysDayDiscount(discountClass) {
+	var disc_day = parseInt($(discountClass).attr('data-date'));
+	var disc_month = parseInt($(discountClass).attr('data-month'))+1;
+	var disc_year = parseInt($(discountClass).attr('data-year'));
+	// alert(disc_day +"; "+ disc_month +"; "+ disc_year);
+	$.ajax({
+		url: '../handlers/date_checker.php',
+		method: 'post',
+		data: {
+			day: disc_day,
+			month: disc_month,
+			year: disc_year,
+		},
+		success: function(data){
+			var data = JSON.parse(data);
+			var discount_txt = '<h1 class="discount_day_name" id="discount_day_name">'+data.name+'</h1><h1 class="discount_size">-<span id="discount_size">'+data.size+'</span>%</h1><h2 class="discount_day_name" id="discount_description">'+data.condition_disc+'</h2>';
+			$('.discoint_desk').html(discount_txt);
+		}
+	});
+}
+
 // параметры появления календаря
 $('.showcase_calendar_pic').click(function(){
 	$('.datepicker-here').fadeIn();
 	kek();
+	checkTodaysDayDiscount('.datepicker--cell datepicker--cell-day, .-current-');
 });
 
 // function kek() {
@@ -41,12 +64,22 @@ function checkDiscount() {
 			success: function(data){
 				var data = JSON.parse(data);
 				var discount_txt = '<h1 class="discount_day_name" id="discount_day_name">'+data.name+'</h1><h1 class="discount_size">-<span id="discount_size">'+data.size+'</span>%</h1><h2 class="discount_day_name" id="discount_description">'+data.condition_disc+'</h2>';
+				$('.discoint_desk').html(discount_txt);
 			}
 		});
 	});
 
 }
 
+function checkDiscountToReloadInfo() {
+	$(document).mouseup(function (e){ // событие клика по веб-документу
+		var classNoDiscount = $(".newclass"); // тут указываем ID элемента
+			if (!classNoDiscount.is(e.target) // если клик был не по нашему блоку
+		    && classNoDiscount.has(e.target).length === 0) { // и не по его дочерним элементам
+			$('.discoint_desk').html('<h1 class="discount_day_name">В этот день скидки нет, попробуйте выбрать другой день</h1>');
+		}
+	});
+}
 
 function kek() {
 	$.ajax({
@@ -67,6 +100,7 @@ function kek() {
 				}
 			}
 			checkDiscount();
+			checkDiscountToReloadInfo()
 		}
 	});
 }

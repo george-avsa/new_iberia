@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Новая Иберия | Лента</title>
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="font/roboto/stylesheet.css">
+	<link rel="stylesheet" href="font/monsterrat/stylesheet.css">
+
+	<!-- styles for header -->
+	<link rel="stylesheet" href="styles/header/header-menu.css">
+	<link rel="stylesheet" href="styles/header/header-panel.css">
+	<link rel="stylesheet" href="styles/header/header-slider.css">
+
+	<!-- main media -->
+	<link rel="stylesheet" href="styles/main_media.css">
+	<script src="libs/jquery.js"></script>
+
+	<!-- libs_datepicker -->
+	<script src="libs/datepicker/datepicker.min.js"></script>
+	<link rel="stylesheet" href="libs/datepicker/datepicker.min.css">
+
+	<!-- styles for slider-mini -->
+	<link rel="stylesheet" href="styles/slider-mini.css">
+
+	<!-- styles for advantages -->
+	<link rel="stylesheet" href="styles/advantage_list.css">
+
+	<!-- styles for showcase -->
+	<link rel="stylesheet" href="styles/showcase.css">
+
+	<!-- styles for genplan -->
+	<link rel="stylesheet" href="styles/genplan.css">
+
+	<!-- styles for news -->
+	<link rel="stylesheet" href="styles/news.css">
+
+	<!-- styles for footer -->
+	<link rel="stylesheet" href="styles/footer.css">
+
+	<!-- styles for modal (house) -->
+	<link rel="stylesheet" href="styles/modals/land_or_house/style.css">
+
+	<!-- styles for modal (contact_form) -->
+	<link rel="stylesheet" href="styles/modals/contact_us/style.css">
+
+	<!-- styles for modal -->
+	<link rel="stylesheet" href="styles/modals/news_one/style.css">
+
+	<!-- styles for news block -->
+	<link rel="stylesheet" href="styles/news_page/style.css">
+</head>
+<body>
+	<div class="modal_contact-us">
+		<div class="modal_contact-us-body">
+		<div class="modal_contact-us-body-cross"><img src="images/cross.svg" alt="" onclick="popupHouseHide('.modal_contact-us')"></div>
+			<div class="modal_contact-us-body-picture">
+				<div class="modal_contact-us_picture"></div>
+				<div class="modal_contact-us_opacity"></div>
+			</div>
+			<form class="modal_contact-us-body-content" action="" method="post">
+				<h1 class="modal_contact-us-title">
+					Новая Иберия
+				</h1>
+				<h1 class="modal_contact-us-text">
+					Оставьте заявку на детальное обсуждение проекта
+				</h1>
+				<h2 class="modal_contact-us-description">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+				</h2>
+				<div class="modal_contact-us-form">
+					<input type="text" class="modal_contact-us_placeholder" placeholder="Ваше имя" maxlength="10" name="name">
+					<input type="text" class="modal_contact-us_placeholder" placeholder="Ваш телефон" maxlength="17" name="telephone">
+					<input type="text" class="modal_contact-us_placeholder" placeholder="Ваша почта" maxlength="18" name="email">
+					<textarea name="" id="modal_contact-us_textarea" cols="30" rows="10" placeholder="Комментарий" maxlength="50" name="comment"></textarea>
+					<input type="submit" class="modal_contact-us_submit">
+				</div>
+				<h3 class="modal_contact-us-data">				
+					Нажимая на кнопку. Вы принимаете условия обработки персональных данных
+				</h3>
+			</form>
+		</div>
+	</div>
+	<div class="modal_news_one">
+		<div class="modal_news-body">
+			<div class="modal_news-body-cross"><img src="images/cross.svg" alt="" onclick="popupHouseHide('.modal_news_one')"></div>
+			<div class="modal_news_one-body-picture">
+				<div class="modal_news_one-picture-bidy"></div>
+				<div class="modal_news_one-opacity"></div>
+				<div class="modal_news_one-texts">
+					<div class="modal_news_one-texts_body">
+						<h1 class="modal_news_one-texts_body_news-title"></h1>
+						<h2 class="modal_news_one-texts-date">
+							12.01.2021
+						</h2>
+					</div>
+				</div>
+			</div>
+			<div class="modal_news_one-body-content">
+				<div class="modal_news_one-body-content_body">
+					<div class="kekmemshmek">
+					</div>
+					<div class="modal_news-footer">
+						<div class="modal_news-footer_read_more">Читать также</div>
+						<div class="modal_news-footer-line"></div>
+					</div>
+					<div class="modal_news-recomended">
+						<div class="modal_news-recomended-item modal_news-recomended-mobile">
+							<div class="modal_news-recomended-item_picture"></div>
+							<h1 class="modal_news-recomnded-item_title">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, nesciunt culpa quod quis voluptatibus nam blanditiis sapiente, incidunt nihil consectetur delectus in ex quasi natus sed numquam voluptas, architecto?	
+							</h1>
+							<h2 class="modal_news-recomnded-item_description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, nesciunt culpa quod quis voluptatibus nam blanditiis sapiente, incidunt nihil consectetur delectus in ex quasi natus sed numquam voluptas, architecto?	
+							</h2>
+							<div class="modal_news-recomnded-item_button">
+								подробнее
+							</div>
+						</div>
+						<div class="modal_news-recomended-item modal_news_second-item">
+							<div class="modal_news-recomended-item_picture"></div>
+							<h1 class="modal_news-recomnded-item_title">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, nesciunt culpa quod quis voluptatibus nam blanditiis sapiente, incidunt nihil consectetur delectus in ex quasi natus sed numquam voluptas, architecto?	
+							</h1>
+							<h2 class="modal_news-recomnded-item_description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, nesciunt culpa quod quis voluptatibus nam blanditiis sapiente, incidunt nihil consectetur delectus in ex quasi natus sed numquam voluptas, architecto?	
+							</h2>
+							<div class="modal_news-recomnded-item_button">
+								подробнее
+							</div>
+						</div>
+						<div class="modal_news-recomended-item modal_news-recomended_tablet">
+							<div class="modal_news-recomended-item_picture"></div>
+							<h1 class="modal_news-recomnded-item_title">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, nesciunt culpa quod quis voluptatibus nam blanditiis sapiente, incidunt nihil consectetur delectus in ex quasi natus sed numquam voluptas, architecto?	
+							</h1>
+							<h2 class="modal_news-recomnded-item_description">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero obcaecati, nesciunt culpa quod quis voluptatibus nam blanditiis sapiente, incidunt nihil consectetur delectus in ex quasi natus sed numquam voluptas, architecto?	
+							</h2>
+							<div class="modal_news-recomnded-item_button">
+								подробнее
+							</div>
+						</div>
+					</div>
+					<div class="modal_news-recomended_more">
+						<h1 class="modal_news-recomended_more-text">
+							Больше...
+						</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header" id="header">
+		<div class="header-menu">
+			<div class="header-menu__body">
+				<div class="header-menu__logo-block">
+					<img src="images/logo.svg" alt="" class="header-menu__logo">
+					<h1 class="header-menu__text-logo">Новая Иберия</h1>
+				</div>
+				<div class="header-menu__menu-block">
+					<a href="index.php"><h1 class="header__menu-item">Главная</h1></a>
+					<a href="index.php#showcase_discounts"><h1 class="header__menu-item">Акции</h1></a>
+					<a href="index.php#advantage_list_body"><h1 class="header__menu-item">О проекте</h1></a>
+					<a href="#footer"><h1 class="header__menu-item">Контакты</h1></a>
+				</div>
+				<div class="header-menu__button-more">
+					<div class="header-menu__button" id="header-menu__button_modal">
+						Узнать поподробнее
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-hidden-menu">
+			<div class="header-menu-hidden-mobile">
+				<div class="header-menu-mobile-body">
+					<div class="logo-mobile">
+						<img src="images/logo.svg" alt="" class="logo-mobile-pic">
+						Новая Иберия
+					</div>
+					<img src="images/mobile_cross.svg" alt="" class="header-menu-burger" onclick="menuHiddenSlideUp()">
+				</div>
+			</div>
+			<div class="header-menu-mobile-menu">
+				<a href="index.php"><h1 class="heaedr-menu-mobile-menu-item">Главная</h1></a>
+				<div class="header-menu__button-mobile_phone" id="header-menu__button-mobile">
+					Узнать подробнее
+				</div>
+				<a href="tel:+79773263306"><div class="header-menu__button-mobile_phone">
+					Позвонить
+				</div></a>
+			</div>
+		</div>
+		<div class="header-menu-mobile">
+			<div class="header-menu-mobile-body">
+				<div class="logo-mobile">
+					<img src="images/logo.svg" alt="" class="logo-mobile-pic">
+					Новая Иберия
+				</div>
+				<img src="images/burger.svg" alt="" class="header-menu-burger" onclick="menuHiddenSlideUp()">
+			</div>
+		</div>
+		<div class="header_slider">
+			
+		</div>
+		<div class="header-opacity_slider">
+			
+		</div>
+		<div class="header-panel">
+			<div class="header-panel__body">
+				<div class="header-panel__title">
+					<h1 class="header-panel__title-text">
+						Котттеджный поселок Новая Иберия
+					</h1>
+					<h2 class="header-panel__title-description">
+						Мы выбрали для вас проекты домов, ориентируясь на многолетний опыт лучших канадских архитекторов.
+					</h2>
+					<div class="header-panel__seasons">
+						<div class="season_panel selected_div" id="spring">
+							Весна
+							<div class="season_line selected_line" id="spring_line"></div>
+						</div>
+						<div class="season_panel" id="summer">
+							Лето
+							<div class="season_line" id="summer_line"></div>
+						</div>
+						<div class="season_panel" id="autumn">
+							Осень
+							<div class="season_line" id="autumn_line"></div>
+						</div>
+						<div class="season_panel" id="winter">
+							Зима
+							<div class="season_line" id="winter_line"></div>
+						</div>
+					</div>
+					<div class="header-panel__arrow-left-body" onclick="sliderRight('.slider_feed')">
+						<div class="header-panel__arrow-left">
+							
+						</div>
+					</div>
+					<div class="header-panel__arrow-right-body">
+						<div class="header-panel__arrow-right" onclick="sliderLeft('.slider_feed', '.header')">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="news_block-body">
+		<div class="news_block">
+			<h1 class="block_title news_block_title">
+				Лента
+			</h1>
+			<div class="news_block-items">
+				
+				<!-- <div class="news_block-item second-news_block-item"></div>
+				<div class="news_block-item"></div> -->
+			</div>
+		</div>
+	</div>
+	<h1 class="news-block_more">
+		Больше новостей
+	</h1>
+	<div class="footer" id="footer">
+		<div class="footer-body">
+			<div class="footer-left">
+				<h1 class="block_title footer_title">
+					Возникли вопросы?
+				</h1>
+				<h2 class="footer-left-description1">
+					Оставьте заявку мы свяжемся с Вами и все подробно расскажем!
+				</h2>
+				<h2 class="footer-left-description2">
+					Также Вы можете подробнее узнать о поселке в Instagram
+				</h2>
+				<img src="images/inst.svg" alt="" class="footer-left_inst">
+				<div class="footer-left__bottom">
+					<a href="#header"><img src="images/back_top.svg" alt="" class="back_top" ></a>
+					<h1 class="header-menu__text-logo">Новая Иберия</h1>
+					<h2 class="copyright">
+						© New-iberia.ru 2020 Все права защищены.
+					</h2>
+				</div>
+			</div>
+			<form action="handlers/send_sms.php" class="footer-right">
+				<input type="text" class="footer_placeholder" placeholder="Ваше имя" name="name" maxlength="10">
+				<input type="text" class="footer_placeholder" placeholder="Ваш телефон" name="telephone" maxlength="17">
+				<input type="text" class="footer_placeholder" placeholder="Ваша почта" name="email" maxlength="25">
+				<textarea id="footer_textarea" cols="30" rows="10" placeholder="Комментарий" name="comment" maxlength="50"></textarea>
+				<input type="submit" class="footer_submit">
+			</form>
+		</div>
+	</div>
+	<div class="alert_for_form">
+		<span class="alert_form_text"></span>
+		<div class="alert_bottom_line"></div>
+	</div>
+<script>
+	$( document ).ready(function(){
+	  function linkUnderline(link, line){
+	  	 $(link).hover(function(){	
+		   		$(line).animate({
+			      width: "80px", // ширина элемента
+			    });
+		    }, function(){ // задаем функцию, которая срабатывает, когда указатель выходит из элемента 	
+		   		$(line).animate({
+			      width: "50px", // ширина элемента
+			    });
+		  });
+	  }
+	  linkUnderline("#spring", "#spring_line");
+	  linkUnderline("#summer", "#summer_line");
+	  linkUnderline("#autumn", "#autumn_line");
+	  linkUnderline("#winter", "#winter_line");
+	});
+
+	$(function(){
+		$("a[href^='#']").click(function(){
+	    	var _href = $(this).attr("href");
+	    	$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+		   	return false;
+		});
+	});
+</script>
+<script> 
+	$(".header_slider").load("template/slider/spring.html");
+	$( "#summer" ).click(function(){
+		$(".header_slider").load("template/slider/summer.html");
+		$('.selected_div').removeClass('selected_div');
+		$('.selected_line').removeClass('selected_line');
+		$('#summer_line').addClass('selected_line');
+		$(this).addClass('selected_div');
+	});
+	$( "#winter" ).click(function(){
+		$(".header_slider").load("template/slider/winter.html");
+		$('.selected_div').removeClass('selected_div');
+		$('.selected_line').removeClass('selected_line');
+		$('#winter_line').addClass('selected_line');
+		$(this).addClass('selected_div');
+	});
+	$( "#spring" ).click(function(){
+		$(".header_slider").load("template/slider/spring.html");
+		$('.selected_div').removeClass('selected_div');
+		$('.selected_line').removeClass('selected_line');
+		$('#spring_line').addClass('selected_line');
+		$(this).addClass('selected_div');
+	});
+	$( "#autumn" ).click(function(){
+		$(".header_slider").load("template/slider/autumn.html");
+		$('.selected_div').removeClass('selected_div');
+		$('.selected_line').removeClass('selected_line');
+		$('#autumn_line').addClass('selected_line');
+		$(this).addClass('selected_div');
+	});
+</script>
+<script src="scripts/functions.js"></script>
+<script src="libs/mask/jquery.mask.min.js"></script>
+<script src="libs/mask/inputmask.js"></script>
+<script> 
+  $(document).ready(function(){   
+    $("[name=email]").inputmask("email")
+  });
+</script>
+<script src="scripts/send_form.js"></script>
+<script src="scripts/news_block_filter.js"></script>
+</body>
+</html>

@@ -1,20 +1,22 @@
 <meta http-equiv="pragma" content="no-cache"/>
 <div class="slider_feed" id="spring_feed">
-	<div class="slider_item" style="background-image: url('../../images/');"></div>
-	<div class="slider_item" style="background: blue;"></div>
-	<div class="slider_item" style="background: maroon;"></div>
+	
 </div>
-
 <script>
-	$( document ).ready(function(){
-	  $( "#left_arrow" ).click(function(){ // задаем функцию при нажатиии на элемент с классом start
-	    var posright = $('#spring_feed').position();
-		var positionr = -(posright.left);
-		if (positionr != 0){
-		    $( "#spring_feed" ).animate({
-		      left: "+=100%",
-		    });
-		}
-	  });
-	});
+	$(document).ready(function() {
+		var season = 1;
+			$.ajax({
+				url: 'handlers/header_slider.php',
+				method: 'post',
+				data: {idseason: season},
+				success: function(data){
+					var answer = JSON.parse(data);
+					var slider_items ='';
+					for (var i = 0; i < answer.links.length; i++) {
+						slider_items = '<div class="slider_item" style="background-image: url('+answer.links[i].link+')"></div>' + slider_items;
+					}
+					$('#spring_feed').html(slider_items);
+				}
+			});
+		});
 </script>

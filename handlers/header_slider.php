@@ -1,7 +1,6 @@
 <?php 
 require "../libs/db.php";
-$season = 4; 
-$photos = R::findAll('header_slider', 'season = ?', array($season));
+$photos = R::findAll('header_slider', 'season = ?', array($_POST['idseason']));
 $count = 0;
 $sum_array = array();
 foreach ($photos as $key) {
