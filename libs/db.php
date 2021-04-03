@@ -1,7 +1,7 @@
 <?php 
 	require "rb.php";
 
-	R::setup( 'mysql:host=localhost;dbname=new_iberia','root', 'root' );
+	R::setup( 'mysql:host=localhost;dbname=cs71915_iberia','cs71915_iberia', '12102000' );
 	if(!R::testConnection()) die('No DB connection!');
 	
 	header('Cache-Control: no cache');

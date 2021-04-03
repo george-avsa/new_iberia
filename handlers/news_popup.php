@@ -18,6 +18,7 @@ foreach ($recom_news as $key) {
 		text1 => $key->text1,
 		text2 => $key->text2,
 		image => $key->image,
+		back_image => $key->back_image,
 	);
 	$stack = array($array);
 	$sum_array = array_merge($stack, $sum_array);

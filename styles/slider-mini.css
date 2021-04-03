@@ -8,8 +8,6 @@
 .slider-mini_big-item {
 	height: 100%;
 	width: 70%;
-	background: blue;
-	background-image: url('../images/slider_kek.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -18,10 +16,15 @@
 	height: 90%;
 	width: 25%;
 	position: relative;
-	background-image: url('../images/slider_kek.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+#slider_mini_bot {
+	display: none;
+}
+#slider-mini_small-item_top:hover .slider-mini_small-item_back{
+	background-color: #00A550;
 }
 .slider-mini_small-item_back {
 	height: 100%;
@@ -59,4 +62,64 @@
 	opacity: 0.9;
 	background-color: #00A550;
 	transition: .5s;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 899px) 
+and (orientation : portrait) {
+	.slider-mini_small-arrow-body {
+		height: 30px;
+		width: 30px;
+		top: 50%;
+		left: 50%;
+		margin-top: -15px;
+		margin-left: -15px;
+	}
+	.slider_mini {
+	    height: 150px;
+	}
+	.slider-mini_small-arrow {
+	    height: 30px;
+	    width: 30px;
+	    border: 2px solid #fff;
+	    background-size: 12px;
+	}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (max-device-width : 899px) 
+and (orientation : landscape) {
+	.slider_mini {
+	    height: 200px;
+	}
+	.slider-mini_small-arrow-body {
+		height: 40px;
+		width: 40px;
+		top: 50%;
+		left: 50%;
+		margin-top: -20px;
+		margin-left: -20px;
+	}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 900px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	.slider_mini {
+	    height: 250px;
+	}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	.slider_mini {
+	    height: 250px;
+	}
 }

@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Новая Иберия</title>
+	<link rel="icon" href="images/logo.svg" type="image/x-icon">
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="font/roboto/stylesheet.css">
 	<link rel="stylesheet" href="font/monsterrat/stylesheet.css">
@@ -47,6 +48,23 @@
 
 	<!-- styles for modal -->
 	<link rel="stylesheet" href="styles/modals/news_one/style.css">
+
+	<!-- яндекс метрика -->
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+	   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+	   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+	   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	   ym(74721436, "init", {
+	        clickmap:true,
+	        trackLinks:true,
+	        accurateTrackBounce:true,
+	        webvisor:true
+	   });
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/74721436" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 	<div class="modal_contact-us">
@@ -61,10 +79,10 @@
 					Новая Иберия
 				</h1>
 				<h1 class="modal_contact-us-text">
-					Оставьте заявку на детальное обсуждение проекта
+					Оставьте заявку, мы ответим Вам в ближайшее время!
 				</h1>
 				<h2 class="modal_contact-us-description">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+					Если у Вас возникли какие-то вопросы, можете заказать звонок, либо <a href="tel:89773263306" style="color: #00A550">позвонить нам</a>!
 				</h2>
 				<div class="modal_contact-us-form">
 					<input type="text" class="modal_contact-us_placeholder" placeholder="Ваше имя" maxlength="10" name="name">
@@ -166,7 +184,7 @@
 					<div class="modal_news_one-texts_body">
 						<h1 class="modal_news_one-texts_body_news-title"></h1>
 						<h2 class="modal_news_one-texts-date">
-							12.01.2021
+							
 						</h2>
 					</div>
 				</div>
@@ -201,7 +219,7 @@
 					<h1 class="header-menu__text-logo">Новая Иберия</h1>
 				</div>
 				<div class="header-menu__menu-block">
-					<a href="#news"><h1 class="header__menu-item">Новости</h1></a>
+					<a href="news.html"><h1 class="header__menu-item">Новости</h1></a>
 					<a href="#showcase_discounts"><h1 class="header__menu-item">Акции</h1></a>
 					<a href="#advantage_list_body"><h1 class="header__menu-item">О проекте</h1></a>
 					<a href="#footer"><h1 class="header__menu-item">Контакты</h1></a>
@@ -224,7 +242,7 @@
 				</div>
 			</div>
 			<div class="header-menu-mobile-menu">
-				<h1 class="heaedr-menu-mobile-menu-item" onclick="mobileAnchor('#news')">Новости</h1>
+				<a href="news.html"><h1 class="heaedr-menu-mobile-menu-item">Новости</h1></a>
 				<h1 class="heaedr-menu-mobile-menu-item" onclick="mobileAnchor('#showcase_discounts')">Акции</h1>
 				<h1 class="heaedr-menu-mobile-menu-item" onclick="mobileAnchor('#advantage_list_body')">О поселке</h1>
 				<div class="header-menu__button-mobile_phone" id="header-menu__button-mobile">
@@ -254,30 +272,30 @@
 			<div class="header-panel__body">
 				<div class="header-panel__title">
 					<h1 class="header-panel__title-text">
-						Котттеджный поселок Новая Иберия
+						Коттеджный поселок Новая Иберия
 					</h1>
 					<h2 class="header-panel__title-description">
-						Мы выбрали для вас проекты домов, ориентируясь на многолетний опыт лучших канадских архитекторов.
+						Комфорт | Качество | Экология
 					</h2>
-					<div class="header-menu__button">
+					<div class="header-menu__button" style="display: none;">
 						Перейти в галерею
 					</div>
 					<div class="header-panel__seasons">
-						<div class="season_panel selected_div" id="spring">
+						<div class="season_panel" id="spring">
 							Весна
-							<div class="season_line selected_line" id="spring_line"></div>
+							<div class="season_line" id="spring_line"></div>
 						</div>
 						<div class="season_panel" id="summer">
 							Лето
 							<div class="season_line" id="summer_line"></div>
 						</div>
-						<div class="season_panel" id="autumn">
+						<!-- <div class="season_panel" id="autumn">
 							Осень
 							<div class="season_line" id="autumn_line"></div>
-						</div>
-						<div class="season_panel" id="winter">
+						</div> -->
+						<div class="season_panel selected_div" id="winter">
 							Зима
-							<div class="season_line" id="winter_line"></div>
+							<div class="season_line selected_line" id="winter_line"></div>
 						</div>
 					</div>
 					<div class="header-panel__arrow-left-body" onclick="sliderRight('.slider_feed')">
@@ -306,13 +324,13 @@
 		<div class="slider-mini_big-item" id="big_slide1" >
 			
 		</div>
-		<div class="slider-mini_small-item">
-			<div class="slider-mini_small-arrow-body">
+		<div class="slider-mini_small-item" id='slider-mini_small-item_top'>
+			<div class="slider-mini_small-arrow-body" id='slider-mini_small-arrow-body_top'>
 				<div class="slider-mini_small-arrow">
 					
 				</div>
 			</div>
-			<div class="slider-mini_small-item_back">
+			<div class="slider-mini_small-item_back"  id='slider-mini_small-item_back_top'>
 				
 			</div>
 		</div>
@@ -361,14 +379,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="slider_mini">
-		<div class="slider-mini_small-item">
-			<div class="slider-mini_small-arrow-body">
+	<div class="slider_mini" id="slider_mini_bot">
+		<div class="slider-mini_small-item" id='slider-mini_small-item_down'>
+			<div class="slider-mini_small-arrow-body" id="slider-mini_small-arrow-body_bottom">
 				<div class="slider-mini_small-arrow">
 					
 				</div>
 			</div>
-			<div class="slider-mini_small-item_back">
+			<div class="slider-mini_small-item_back" id='slider-mini_small-item_back_down'>
 				
 			</div>
 		</div>
@@ -379,7 +397,7 @@
 	<div class="showcase_discounts" id="showcase_discounts">
 		<div class="showcase_title-block">
 			<h1 class="block_title showcase_title">
-				Скидка 10% при покупке до завершения строительства
+				Готовые решения
 			</h1>
 			<div class="showcase_calendar">
 				<div class="datepicker-here">
@@ -394,23 +412,7 @@
 			</div>
 		</div>
 		<div class="showcase-body">
-			<div class="showcase-item">
-				<div class="showcase-item__image">
-					<div class="showcase-item__discount">
-						15%
-					</div>
-				</div>
-				<h1 class="showcase-item__title">
-					Площадь дома - 115 кв. м <br>
-					Цена за кв. м - 50.000 ₽
-				</h1>
-				<h2 class="showcase-item__description">
-					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae, reprehenderit quas, laudantium consequuntur a quisquam natus similique facere debitis aperiam numquam libero ducimus dolor esse, enim cum odio, adipisci maiores ad accusamus quaerat obcaecati nobis quidem aliquid? Quia, vel officiis repudiandae excepturi? Minus, laboriosam, eius. Iste enim blanditiis temporibus molestiae!
-				</h2>
-				<div class="showcase-item__button" onclick="popupHouse('.modal_house')">
-					Подробнее
-				</div>
-			</div>
+			
 		</div>
 		<div class="showcase-more">
 			<h1 class="showcase-more__text" onclick="moreHouses()">
@@ -459,10 +461,12 @@
 			
 		</div>
 	</div>
-	<div class="news_more" style="display: none;">
-		<h1 class="news_more">
-			Больше новостей
-		</h1>
+	<div class="news_more">
+		<a href="news.html">
+			<h1 class="news_more">
+				Больше новостей
+			</h1>
+		</a>
 	</div>
 	<div class="footer" id="footer">
 		<div class="footer-body">
@@ -471,12 +475,12 @@
 					Возникли вопросы?
 				</h1>
 				<h2 class="footer-left-description1">
-					Оставьте заявку мы свяжемся с Вами и все подробно расскажем!
+					<span id="footer_link-contact_us">Оставьте заявку</span> мы свяжемся с Вами и все подробно расскажем!
 				</h2>
 				<h2 class="footer-left-description2">
 					Также Вы можете подробнее узнать о поселке в Instagram
 				</h2>
-				<img src="images/inst.svg" alt="" class="footer-left_inst">
+				<a href="https://www.instagram.com/new_iberia.ru/" target="_blank"><img src="images/inst.svg" alt="" class="footer-left_inst"></a>
 				<div class="footer-left__bottom">
 					<a href="#header"><img src="images/back_top.svg" alt="" class="back_top" ></a>
 					<h1 class="header-menu__text-logo">Новая Иберия</h1>
@@ -497,6 +501,10 @@
 	<div class="alert_for_form">
 		<span class="alert_form_text"></span>
 		<div class="alert_bottom_line"></div>
+	</div>
+	<div class="alert_video">
+		<iframe id="computer_video" width="560" height="315" src="https://www.youtube.com/embed/tKuvtFMLj64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe id="mobile_video" width="320" height="180" src="https://www.youtube.com/embed/tKuvtFMLj64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 <script>
 	$( document ).ready(function(){
@@ -526,7 +534,7 @@
 	});
 </script>
 <script> 
-	$(".header_slider").load("template/slider/spring.html");
+	$(".header_slider").load("template/slider/winter.html");
 	$( "#summer" ).click(function(){
 		$(".header_slider").load("template/slider/summer.html");
 		$('.selected_div').removeClass('selected_div');
@@ -556,22 +564,20 @@
 		$(this).addClass('selected_div');
 	});
 </script>
-<script src="scripts/functions.js"></script>
 <script>
-	  	 $('.slider-mini_small-item_back').hover(function(){	
-		   		$(this).addClass('slider-mini_small-item_hover');
-		   		$('.slider-mini_small-item').animate({
-					width: "28%",
-					height: "100%",
-				});
-		    }, function(){	
-		   		$(this).removeClass('slider-mini_small-item_hover');
-		   		$('.slider-mini_small-item').animate({
-					width: "25%",
-					height: "90%",
-				});
-		  });
+	$('.genplan_open_video').click(function(){
+	   var container = $(".alert_video");
+	        container.fadeIn();
+	});
+	$(document).mouseup(function (e) {
+	    var container = $(".alert_video");
+	    if (container.has(e.target).length === 0){
+	        container.fadeOut();
+	    }
+	});
 </script>
+<script src="scripts/functions.js"></script>
+<script src="scripts/slider_mini.js"></script>
 <script src="scripts/house_filter.js"></script>
 <script src="libs/mask/jquery.mask.min.js"></script>
 <script src="libs/mask/inputmask.js"></script>

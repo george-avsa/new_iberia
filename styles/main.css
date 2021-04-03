@@ -85,7 +85,24 @@ body {
 	left: 5%;
 	
 }
-
+.alert_video {
+	position: fixed;
+	z-index: 1000;
+	width: 560px;
+	height: 315px;
+	overflow: hidden;
+	left: 50%;
+	top: 50%;
+	margin-left: -285px;
+	margin-top: -165px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+}
+#mobile_video {
+	display: none;
+}
 
 
 
@@ -101,6 +118,7 @@ and (orientation : landscape) {
 		font-size: 12px;
 		overflow: hidden;
 	}	
+	
 }
 
 /* Smartphones (portrait) ----------- */
@@ -110,7 +128,19 @@ and (orientation : portrait) {
 	.alert_for_form {
 		font-size: 12px;
 		overflow: hidden;
-	}	
+	}
+	#computer_video {
+		display: none;
+	}
+	.alert_video {
+		width: 320px;
+		height: 180px;
+		margin-left: -160px;
+		margin-top: -80px;
+	}
+	#mobile_video {
+		display: block;
+	}
 }
 
 
